@@ -26,7 +26,7 @@ app.use(express.urlencoded({ limit: "50mb" }));
 app.use("/", require("./router"));
 
 app.get("/", (req, res) => {
-  res.json();
+  res.json("connected to server");
 });
 
 app.listen(port, () => {
