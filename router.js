@@ -251,7 +251,6 @@ router.get("/viewsales", authentication, async (req, res) => {
   }
 });
 
-//administrator login
 router.post("/administratorlogin", async (req, res) => {
   try {
     let administrator = {
@@ -274,7 +273,7 @@ router.post("/administratorlogin", async (req, res) => {
 
     let payload = {
       user: {
-        id:user._id,
+        id: user._id,
       },
     };
     let token = jwt.sign(payload, process.env.JWT_SECRET_KEY);
@@ -303,7 +302,7 @@ router.post("/stafflogin", async (req, res) => {
 
     let payload = {
       user: {
-        id:user._id,
+        id: user._id,
       },
     };
     let token = jwt.sign(payload, process.env.JWT_SECRET_KEY);
