@@ -79,7 +79,7 @@ router.put("/update/:id", async (req, res) => {
 
 //employee configuration
 
-router.post("/addemployee", authentication, async (req, res) => {
+router.post("/addemployee", async (req, res) => {
   try {
     let empnum = await employees.find();
     let uid = `stp${String(empnum.length + 1).padStart(3, "0")}`;
